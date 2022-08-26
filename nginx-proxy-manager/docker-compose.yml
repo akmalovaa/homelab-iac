@@ -1,0 +1,33 @@
+version: "3"
+services:
+  nginx-proxy-manager:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - '80:80' # HTTP Port
+      - '443:443' # HTTPS Port
+      - '81:81' # Admin Web Port
+      # Add any other Stream port you want to expose
+      # - '21:21' # FTP
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+
+  npm-monitoring:
+    image: xavierh/goaccess-for-nginxproxymanager:latest
+    restart: always
+    environment:
+        - TZ=Asia/Yekaterinburg
+        - SKIP_ARCHIVED_LOGS=True #optional
+        - EXCLUDE_IPS=127.0.0.1 #optional
+        - LOG_TYPE=NPM
+    ports:
+        - '82:7880'
+    volumes:
+        - ./data/logs:/opt/log
+
+  error-page-404:
+    image: 'kale5/rickroll:latest'
+    restart: unless-stopped
+    ports:
+      - '83:80'
