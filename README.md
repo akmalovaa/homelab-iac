@@ -15,3 +15,7 @@ Open-source, self-hosted, easy-to-use platform for organising and storing inform
 
 
 ## NextCloud - Self cloud storage
+Open-source, self-hosted file sync and share and communication app platform
+
+
+## ... 
