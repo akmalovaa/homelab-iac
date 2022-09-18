@@ -6,7 +6,7 @@ Home servers IaC practice
 Network-wide software for blocking ads & tracking. After you set it up, it'll cover ALL your home devices, and you don't need any client-side software for that.
 
 
-## [NGINX](NginxProxyManager/nginx-proxy-manager) Proxy Manager - Revers Proxy ✔️
+## [NGINX Proxy Manager](NginxProxyManager/nginx-proxy-manager) - Revers Proxy ✔️
 This project comes as a pre-built docker image that enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.
 
 
