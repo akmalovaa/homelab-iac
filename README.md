@@ -10,7 +10,7 @@ Network-wide software for blocking ads & tracking. After you set it up, it'll co
 This project comes as a pre-built docker image that enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.
 
 
-## BookStack - Home wiki page
+## BookStack - Home wiki page ✔️
 Open-source, self-hosted, easy-to-use platform for organising and storing information.
 
 
