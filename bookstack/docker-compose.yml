@@ -1,0 +1,34 @@
+---
+version: "3.7"
+services:
+  bookstack:
+    image: linuxserver/bookstack:version-v22.09
+    container_name: bookstack
+    environment:
+      - APP_URL=${URL} 
+      - TZ=${TIME_ZONE}
+      - DB_HOST=db:3306
+      - DB_DATABASE=${MYSQL_DATABASE}
+      - DB_USERNAME=${MYSQL_USER}
+      - DB_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - ./bookstack/app:/config
+    ports:
+      - 80:80
+    restart: unless-stopped
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:10.9
+    container_name: db
+    environment:
+      - TZ=${TIME_ZONE}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - ./bookstack/db:/var/lib/mysql 
+    ports:
+      - 3306:3306
+    restart: unless-stopped
