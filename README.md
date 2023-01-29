@@ -14,7 +14,7 @@ This project comes as a pre-built docker image that enables you to easily forwar
 Open-source, self-hosted, easy-to-use platform for organising and storing information.
 
 
-## [Vaultwarden](https://github.com/dani-garcia/vaultwarden) - Home wiki page ✔️
+## [Vaultwarden](https://github.com/dani-garcia/vaultwarden) - Password manager ✔️
 Free and open-source password management service that stores sensitive information such as website credentials in an encrypted vault. 
 Vaultwarden is a server and a alternative backend for the password manager Bitwarden. While Vaultwarden is used with the Bitwarden clients it does not implement the same feature set as the Bitwarden server. However, the setup is much simpler.
 
