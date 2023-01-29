@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+  vaultwarden:
+    image: vaultwarden/server:1.27.0
+    container_name: vaultwarden
+    volumes:
+      - './data:/data'
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 3012:3012
+    environment:
+      WEBSOCKET_ENABLED: 'true'
+#      SIGNUPS_ALLOWED: 'false'
+#      DOMAIN: $DOMAIN
+
+      # Additional
+#      SIGNUPS_DOMAINS_WHITELIST: $SIGNUPS_DOMAINS_WHITELIST
+#      SIGNUPS_VERIFY: $SIGNUPS_VERIFY
+#      INVITATIONS_ALLOWED: $INVITATIONS_ALLOWED
+#      SHOW_PASSWORD_HINT: $SHOW_PASSWORD_HINT
+#      ADMIN_TOKEN: $ADMIN_TOKEN
+#      DISABLE_ADMIN_TOKEN: $DISABLE_ADMIN_TOKEN
+
+      # Mail Server
+#      SMTP_HOST: $SMTP_HOST
+#      SMTP_FROM: $SMTP_FROM
+#      SMTP_PORT: $SMTP_PORT
+#      SMTP_SECURITY: $SMTP_SECURITY
+#      SMTP_USERNAME: $SMTP_USERNAME
+#      SMTP_PASSWORD: $SMTP_PASSWORD
+
+      # Logging
+#      LOG_FILE: '/data/vaultwarden.log'
+#      LOG_LEVEL: $LOG_LEVEL
