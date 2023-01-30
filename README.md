@@ -1,5 +1,5 @@
 # Homelab-iac
-My favorites self-hosted service
+My favorites self-hosted service docker-compose
 
 
 ## [AdguardHome](https://github.com/AdguardTeam/AdGuardHome) - DNS Server ✔️
